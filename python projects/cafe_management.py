@@ -11,8 +11,11 @@ orders = {
 emojis = {
     'pizza': '🍕',
     'coffee': '☕',
-    'milkshake': '🥤',
-    'shawarma': '🌯'
+    
+    'milkshake' : '🥤',
+    'shawarma': '🌯',
+    'burger' : '🌯'
+    
 }
 
 while True:
@@ -20,7 +23,7 @@ while True:
 
     # Use FOR loop to print menu
     for item in orders:
-        print(f" {item.capitalize()} {emojis[item]} : ₹{orders[item]}")
+        print(f" {item.capitalize()}, {emojis[item]} : ₹{orders[item]}")
 
     total = 0
     user_order = input("\nChoose your order from the menu :").lower()
@@ -32,7 +35,7 @@ while True:
         print("Item not available. Please enter an available order. ⚠️")
         continue
 
-    another_order = input("\nDo you want another order? (yes/no): ").lower()
+    another_order = input("\nDo you want another order? (yes) or \npress any key to (no): ").lower()
 
     if another_order == 'yes':
         print("\nMENU AGAIN:")
