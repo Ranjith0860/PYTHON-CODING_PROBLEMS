@@ -1,11 +1,11 @@
 # # a function calling itself  recuression
 # # factorial
-# def print_num(n):
-#     if n==0:
-#         return 0
-#     print(n)
-#     print_num(n - 1)
-# print_num(1)
+def print_num(n):
+    if n==0:
+        return 0
+    print(n)
+    print_num(n - 1)
+print_num(5)
 
 # def fact(n):
 #     if n==1:
@@ -65,6 +65,7 @@ def febi(n):
     if n==2:
         return 1
     return n+febi(n-1)
+
 print(febi(5))
 
 

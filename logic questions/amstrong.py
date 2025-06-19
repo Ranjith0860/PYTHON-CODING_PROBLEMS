@@ -19,3 +19,8 @@ if int(num)==sum1:
     print(f"{num} is an amstrong number")
 else:
     print(f"{num} not an amstrong number")
+
+
+
+
+
