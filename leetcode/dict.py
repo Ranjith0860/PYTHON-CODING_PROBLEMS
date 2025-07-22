@@ -1,4 +1,4 @@
-nums = list(map(int, input().split(" ")))
+nums = list(map(int, input("enter numbers that convert to dictonary").split(" ")))
 dic={}
 
 for i in nums:
