@@ -18,3 +18,4 @@ class MyFamily:
 my = MyFamily()
 k=int(input("enter family members count: "))
 my.FamilyNames(k)
+my.FamilyNames(k)
