@@ -45,20 +45,40 @@
 # print(max_value)
 
 
-try:
-    num=int(input("enter a number for range "))
-    num2=[]
-    for i in range(1,num+1):
-        vaule=int(input(f"Element {i}:"))
-        num2.append(vaule)
-    max_value=num2[0]
-    min_value=num2[1]
-    for j in num2:
-        if max_value<j:
-            max_value=j
-        if min_value>j:
-            min_value=j
-    print(f"The max value is:{max_value}")
-    print(f"The min_value is:{min_value}")
-except ValueError:
-    print(f"please Enter an integer :")
+num = int(input("Enter the array size: "))
+num2 = []
+
+# Input numbers
+for i in range(1, num + 1):
+    try:
+        number_value = int(input(f"Enter number {i}: "))
+        num2.append(number_value)
+    except ValueError:
+        print("Please enter an integer value!")
+        break
+
+# Find max & min
+max_value = num2[0]
+min_value = num2[0]
+
+for value in num2:
+    if value > max_value:
+        max_value = value
+    if value < min_value:
+        min_value = value
+
+# Remove duplicates but keep in sorted list
+unique_values = sorted(list(set(num2)))
+
+print(f"Given array without duplicates: {unique_values}")
+print(f"Max value is: {max_value}")
+print(f"Min value is: {min_value}")
+
+print("\nIf you want to see the original array, press (y) or press Enter to skip.")
+
+yes = input("Enter: ").lower()
+
+if yes == "y":
+    print(f"Original array: {num2}")
+    print(f"Max value: {max_value}")
+    print(f"Min value: {min_value}")

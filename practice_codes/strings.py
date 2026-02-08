@@ -11,8 +11,8 @@
 # reverse of a string all methods
 
 string="ranjith kumar"
-# for i in range (len(string)-1,-1,-1):
-#     print(string[i],end=" ")
+for i in range (len(string)-1,-1,-1):
+    print(string[i],end=" ")
 
 # reversed =string[::-1]
 # z=list(reversed )
@@ -34,13 +34,13 @@ string="ranjith kumar"
 # print(st2)
 
 
-s = "Python"
-reversed_s = ""
-i = len(s) - 1  # Start from last index
-while i >= 0:
-    reversed_s += s[i]  # Add characters in reverse order
-    i -= 1  # Move to the previous character
-print(reversed_s)  # Output: "nohtyP"
+# s = "Python"
+# reversed_s = ""
+# i = len(s) - 1  # Start from last index
+# while i >= 0:
+#     reversed_s += s[i]  # Add characters in reverse order
+#     i -= 1  # Move to the previous character
+# print(reversed_s)  # Output: "nohtyP"
 
 
 #recurression

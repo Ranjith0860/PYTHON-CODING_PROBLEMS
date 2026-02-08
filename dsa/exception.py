@@ -1,17 +1,21 @@
-#try,except errors
-try:      
-    a,b=list(map(int,input("enter a,b : ").split(",")))
-    z=a//b
-    print(z)
+try:
+    a, b = map(int, input("Enter a,b (comma separated): ").split(","))
+    
+    if b == 0:
+        print("Error: b should not be zero")
 
-    if a<b:
-        print(f"a should be greater than b you have enterd a= {a},b={b}")
-    if b==0 or a <0:
-        print(f"the b should be greater than zero{b}")
+    elif  a < b:
+         print(f"Warning: a should be greater than b (you entered a={a}, b={b})")
+    
+    elif a < 0:
+            print(f"Warning: a or b should not be negative (you entered a={a}) b= {b}")
+    else:
+        z = int(a //b)
+        print(f"Result of Α ~➗ b ➡️    {z}")
+        
+       
+
 except ValueError:
-     print(f"please enter a integer seperatedby comma")
+    print("Error: Please enter two integers separated by a and b")
 except ZeroDivisionError:
-    print("zero division error")
-
-
-
+    print("Error: Division by zero is not allowed")

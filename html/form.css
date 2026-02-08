@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* DARK BACKGROUND */
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #1f2933, #0f172a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e2e5ea;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 360px;
+    padding: 15px;
+}
+
+/* FORM CARD */
+.form {
+    background: #111827;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(203, 203, 216, 0.25);
+}
+
+/* FORM LAYOUT */
+.form form{
+    display: flex;
+    flex-direction:column;
+}
+
+/* INPUTS */
+.form input[type="email"],
+.form input[type="password"] {
+    margin: 15px 0 18px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+    background: #020617;
+    color: #f0f0f1;
+    font-size: 15px;
+}
+
+/* INPUT FOCUS ANIMATION */
+.form input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 8px #6366f1;
+}
+
+/* CHECKBOX */
+.form input[type="checkbox"] {
+    accent-color: #4b9beb;
+    width: 20px;;
+    border-radius: 80%;
+    margin:auto;
+    
+    
+}
+#r{
+
+    margin: auto;
+    text-transform: capitalize;
+    
+    text-decoration: solid;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* BUTTON – ANIMATED */
+#btn {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    background: linear-gradient(135deg, #6366f1, #22d3ee);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* BUTTON HOVER */
+#btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(7, 7, 29, 0.6);
+}
+
+/* BUTTON CLICK */
+#btn:active {
+    transform: scale(0.96);
+}
+
+/* GLOW ANIMATION */
+#btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(233, 229, 229, 0.4),
+        transparent
+    );
+    transition: 0.6s;
+}
+
+#btn:hover::before {
+    left: 100%;
+}
+
+/* MOBILE-ONLY STYLING */
+@media (max-width: 480px) {
+    .form {
+        padding: 20px;
+    }
+
+    .form input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #btn {
+        font-size: 15px;
+        padding: 11px;
+    }
+}

@@ -1,10 +1,11 @@
 import random
 
 playing=True
-guess_number=random.randint(1,100)
+choices=(1,5,3,6,7,9)
+guess_number=random.choice(choices)
 while playing:
     try:
-        guess=int(input("enter your guess number"))
+        guess=int(input("enter your guess number:1to10"))
         if guess < guess_number:
             print("you are low")
         elif guess > guess_number:

@@ -1,0 +1,6 @@
+zip() is a built-in Python function that combines two or more iterables index-wise.
+
+Think of it like a zipper:
+
+zip(iterable1, iterable2, ...)
+

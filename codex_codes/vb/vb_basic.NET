@@ -1,0 +1,8 @@
+Module Module1
+
+    Sub Main()
+        Console.WriteLine("Hello from Visual Basic!")
+        Console.ReadLine() ' Keeps the console window open until a key is pressed
+    End Sub
+
+End Module

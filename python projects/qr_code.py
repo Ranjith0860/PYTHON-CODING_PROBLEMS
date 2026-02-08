@@ -9,7 +9,8 @@ if not (file_name.endswith(".png") or file_name.endswith(".jpg")):
     file_name += ".png"
 
 # Create QRCode object
-qr = qrcode.QRCode(box_size=10, border=5)
+qr = qrcode.QRCode(box_size=12, border=7)
+
 qr.add_data(data)
 qr.make(fit=True)
 
